@@ -1,0 +1,35 @@
+@import './../abstracts/animations.scss';
+
+@mixin wrapper($width, $padding){
+	max-width: $width;
+	padding-inline: $padding;
+	margin-inline: auto;
+}
+
+@mixin afterBgdAnimation{
+	position:relative;
+	&:not(.beforeAnimation):after{
+		animation-name: threeColoursGradient;
+		animation-duration: .5s;
+		animation-fill-mode: forwards;
+	}
+	&:after{
+		content:"";
+		pointer-events: none;
+		position:absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: calc(100% + 1px);
+		background-position:left 100% center;
+		background-image: linear-gradient(
+			to right,
+			transparent calc(100% / 3),
+			$color_light calc(100% / 3),
+			$color_light calc(100% / 3 * 2),
+			$color_primary_600 calc(100% / 3 * 2),
+			$color_primary_600 100%,
+		);
+		background-size: 300%;
+	}
+}

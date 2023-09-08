@@ -1,0 +1,116 @@
+@import './../abstracts/variables.scss';
+@import './../abstracts/mixins.scss';
+
+.Hero{
+	background-color:$color_primary_600;
+	min-height: 100vh;
+	&__container{
+		@include wrapper(500px, $main_padding);
+		padding-top: 150px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-items: flex-start;
+		gap:200px;
+	}
+	&__text{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-items: flex-start;
+		position:relative;
+		padding-bottom:10px;
+		&:not(.beforeAnimation):before{
+			transition-delay: .8s;
+			height: 100%;
+		}
+		&:before{
+			content:"";
+			width: 2px;
+			height: 0%;
+			position: absolute;
+			left:-5px;
+			top:0;
+			background-color: $color_light;
+			transition:.5s;
+		}
+		&__title{
+			font-size: 60px;
+			font-weight: 800;
+			letter-spacing: 4px;
+			line-height: 60px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			color:$color_light;
+			span{
+				@include afterBgdAnimation;
+				display: inline-block;
+				padding:10px 30px;
+				&:last-child:after{
+					animation-delay: .2s;
+				}
+			}
+		}
+		&__job{
+			@include afterBgdAnimation;
+			display: inline-block;
+			margin-block:25px 0;
+			margin-inline: 35px;
+			color:$color_light;
+			position:relative;
+			&:after{
+				animation-delay: .4s;
+			}
+		}
+	}
+	&__buttons{
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-inline:auto;
+		&__top, &__bottom{
+			overflow: hidden;
+			&__container{
+				transition:translate .5s 1s;
+				&:not(.beforeAnimation){
+					translate:0;
+				}
+			}
+		}
+		&__top__container{
+			translate:0 100%;
+		}
+		&__separator{
+			width: 0%;
+			opacity:0;
+			transition: width .5s .8s,opacity 0s .8s;
+			background-color: $color_light;
+			margin:0;
+			border-top:solid 15px $color_primary_600;
+			border-bottom:solid 15px $color_primary_600;
+			height:32px;
+			&:not(.beforeAnimation){
+				width: 100%;
+				opacity:1;
+			}
+		}
+		&__bottom{
+			width: 100%;
+			&__container{
+				padding-inline: 23px;
+				width:100%;
+				display: flex;
+				justify-content: space-between;
+				translate:0 -100%;
+			}
+		}
+		&__cv{
+			margin-inline: auto;
+		}
+	}
+	&__bottomDecoration{
+
+	}
+}

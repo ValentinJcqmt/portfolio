@@ -1,0 +1,75 @@
+@import '../abstracts/variables.scss';
+
+.Button{
+	display: inline-flex;
+	align-items: center;
+	gap:10px;
+	text-decoration: none;
+	padding: 20px 30px;
+	cursor:pointer;
+	transition:.4s;
+	border-radius: 6px;
+	text-align: center;
+	font-size: 20px;
+	background-image: linear-gradient(
+		to right,
+		$color_dark calc(50% - 50px),
+		$color_primary_600 calc(50% - 50px),
+		$color_primary_600 calc(50% + 50px),
+		$color_primary_500 calc(50% + 50px)
+	);
+	background-size: calc(200% + 100px) 100%;
+	background-position: right 0% center;
+	color:$color_light;
+	font-weight: 700;
+	&:hover, &:focus-visible{
+		background-position: left 0% center;
+		color:$color_light;
+		&[data-icon]:before{
+			background-color:$color_light;
+		}
+	}
+
+	&[data-icon]:before{
+		content:"";
+		display: inline-block;
+		width:18px;
+		height:18px;
+		mask-repeat:no-repeat;
+		mask-position:center;
+		mask-size:contain;
+		background-color:$color_light;
+	}
+	@each $icon in $icons {
+		&[data-icon='#{$icon}']:before{
+			mask-image:url('../../#{$icon}.svg');
+		}
+	}
+
+	&--light{
+		background-image: linear-gradient(
+			to right,
+			$color_primary_500 calc(50% - 50px),
+			$color_primary_400 calc(50% - 50px),
+			$color_primary_400 calc(50% + 50px),
+			$color_light calc(50% + 50px)
+		);
+		color:$color_dark;
+		&[data-icon]:before{
+			background-color:$color_dark;
+		}
+		&:hover, &:focus-visible{
+			color:$color_light;
+			&[data-icon]:before{
+				background-color:$color_light;
+			}
+		}
+	}
+	&--big{
+		font-size: 28px;
+		&[data-icon]:before{
+			width:24px;
+			height:24px;
+		}
+	}
+}
