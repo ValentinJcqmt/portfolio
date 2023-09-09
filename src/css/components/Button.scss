@@ -1,16 +1,17 @@
 @import '../abstracts/variables.scss';
+@import '../abstracts/mixins.scss';
 
 .Button{
 	display: inline-flex;
 	align-items: center;
 	gap:10px;
 	text-decoration: none;
-	padding: 20px 30px;
+	padding: 10px 15px;
 	cursor:pointer;
 	transition:.4s;
 	border-radius: 6px;
 	text-align: center;
-	font-size: 20px;
+	font-size: 18px;
 	background-image: linear-gradient(
 		to right,
 		$color_dark calc(50% - 50px),
@@ -22,6 +23,10 @@
 	background-position: right 0% center;
 	color:$color_light;
 	font-weight: 700;
+	@include laptop{
+		padding: 20px 30px;
+		font-size: 20px;
+	}
 	&:hover, &:focus-visible{
 		background-position: left 0% center;
 		color:$color_light;
@@ -33,12 +38,17 @@
 	&[data-icon]:before{
 		content:"";
 		display: inline-block;
-		width:18px;
-		height:18px;
+		width:16px;
+		height:16px;
 		mask-repeat:no-repeat;
 		mask-position:center;
 		mask-size:contain;
 		background-color:$color_light;
+		transition:.2s;
+		@include laptop{
+			width:18px;
+			height:18px;
+		}
 	}
 	@each $icon in $icons {
 		&[data-icon='#{$icon}']:before{
@@ -66,10 +76,17 @@
 		}
 	}
 	&--big{
-		font-size: 28px;
+		font-size: 22px;
 		&[data-icon]:before{
-			width:24px;
-			height:24px;
+			width:18px;
+			height:18px;
+		}
+		@include laptop{
+			font-size: 28px;
+			&[data-icon]:before{
+				width:24px;
+				height:24px;
+			}	
 		}
 	}
 }

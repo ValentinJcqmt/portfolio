@@ -85,7 +85,6 @@ function Hero(){
 
 			</div>
 
-			{/* <div className='Hero__bottomDecoration'></div> */}
 		</div>
 	</section>
 }

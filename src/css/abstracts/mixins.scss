@@ -2,8 +2,29 @@
 
 @mixin wrapper($width, $padding){
 	max-width: $width;
-	padding-inline: $padding;
 	margin-inline: auto;
+	width: 100%;
+	@if $padding != 0 {
+		padding-inline: $padding;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: $min-lg) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (min-width: $min-md) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: $min-sm) {
+		@content;
+	}
 }
 
 @mixin afterBgdAnimation{
@@ -18,16 +39,16 @@
 		pointer-events: none;
 		position:absolute;
 		top:0;
-		left:0;
-		width: 100%;
-		height: calc(100% + 1px);
+		left:1px;
+		width: calc(100% + 1px);
+		height: calc(100% + 2px);
 		background-position:left 100% center;
 		background-image: linear-gradient(
 			to right,
-			transparent calc(100% / 3),
-			$color_light calc(100% / 3),
-			$color_light calc(100% / 3 * 2),
-			$color_primary_600 calc(100% / 3 * 2),
+			transparent calc(100% / 3 + 1px),
+			$color_light calc(100% / 3 + 1px),
+			$color_light calc(100% / 3 * 2 - 1px),
+			$color_primary_600 calc(100% / 3 * 2 - 1px),
 			$color_primary_600 100%,
 		);
 		background-size: 300%;
