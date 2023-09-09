@@ -5,14 +5,24 @@ import Button from './Button';
 
 const buttons = [
 	{
+		icon : "email",
+		href : "mailto:valentinjacquement@gmail.com",
+		target : null,
+	},
+	{
 		icon : "linkedin",
 		href : "https://www.linkedin.com/in/valentin-jacquement-621231283/",
 		target : "_blank",
 	},
 	{
-		icon : "email",
-		href : "mailto:valentinjacquement@gmail.com",
-		target : null,
+		icon : "github",
+		href : "https://github.com/ValentinJcqmt",
+		target : "_blank",
+	},
+	{
+		icon : "instagram",
+		href : "https://www.instagram.com/valentinjcqmt/",
+		target : "_blank",
 	},
 ]
 
