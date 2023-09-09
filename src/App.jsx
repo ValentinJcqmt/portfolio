@@ -7,8 +7,6 @@ function App() {
   return (
     <main className='App'>
 		<Hero />
-		<Separator />
-		<Projects />
 	</main>
   )
 }
