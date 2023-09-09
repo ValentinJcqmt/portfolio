@@ -62,7 +62,7 @@ function Hero(){
 				<div className='Hero__buttons__top'>
 					<div className={clsx('Hero__buttons__top__container', !animated && 'beforeAnimation')}>
 						<Button className='Hero__buttons__cv'
-							href="/public/CV Valentin Jacquement.pdf"
+							href="/CV Valentin Jacquement.pdf"
 							download={true}
 							variants="light">
 							Télécharger mon CV
