@@ -11,6 +11,7 @@
 		align-items: center;
 		justify-content: space-evenly;
 		gap:20px;
+		position:relative;
 		@include laptop{
 			align-items: flex-start;
 		}
@@ -132,6 +133,47 @@
 		}
 		&__cv{
 			margin-inline: auto;
+		}
+	}
+	&__goToProjects{
+		&__container{
+			position:absolute;
+			bottom: 30px;
+			left:50%;
+			translate:-50% 0;
+			height:25px;
+			width:100%;
+			overflow: hidden;
+		}
+		width: 25px;
+		height: 25px;
+		position:absolute;
+		top:-100%;
+		left:50%;
+		translate:-50% 0;
+		text-decoration: none;
+		color:$color_light;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition:.2s;
+		transition-delay:1.3s;
+		&:hover, &:focus-visible{
+			&:after{
+				translate:0 5px;
+			}
+		}
+		&:not(.beforeAnimation){
+			top:0%;
+		}
+		&:after{
+			content:"";
+			width:10px;
+			height:10px;
+			border-bottom: solid 2px $color_light;
+			border-right: solid 2px $color_light;
+			rotate:45deg;
+			transition:.2s;
 		}
 	}
 }
