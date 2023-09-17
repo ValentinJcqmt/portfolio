@@ -32,7 +32,21 @@
 	&__title{
 		margin:0 auto;
 		text-align: center;
-		font-size: 32px;
-		font-weight: 700;
+		font-size: 38px;
+		font-weight: 800;
+	}
+	.Project:not(:last-child){
+		position:relative;
+		&:after{
+			content:"";
+			width: 300px;
+			max-width: 80%;
+			height: 1px;
+			background-color: $color_primary_600;
+			position:absolute;
+			bottom:-1px;
+			left:50%;
+			translate:-50% 0;
+		}
 	}
 }

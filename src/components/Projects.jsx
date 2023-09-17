@@ -19,12 +19,14 @@ export default function Projects(){
 				Mes créations
 			</h2>
 			<Project title="Outil de ticketing"
+				subtitle="Lorem ipsum"
+				mediaPosition="right"
 				medias={[
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
+					'https://source.unsplash.com/random?1',
+					'https://source.unsplash.com/random?2',
+					'https://source.unsplash.com/random?3',
+					'https://source.unsplash.com/random?4',
+					'https://source.unsplash.com/random?5',
 				]}>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet congue augue, sit amet ultrices massa. Pellentesque rutrum erat vitae scelerisque rhoncus. Donec eget vulputate justo. Sed eu vestibulum elit. Duis mattis tincidunt congue. Aliquam tincidunt metus imperdiet pharetra gravida. Mauris in condimentum sapien. Proin fermentum velit eget est iaculis, imperdiet posuere lectus placerat. Sed molestie nisl in maximus malesuada. Proin ut sem at arcu rhoncus feugiat ac ac massa. Aliquam consequat elit laoreet sapien suscipit tincidunt. Morbi at risus maximus, dictum mauris id, consequat sem. Duis bibendum blandit dui, at malesuada ante dictum a. Aliquam id interdum ante.
@@ -37,12 +39,14 @@ export default function Projects(){
 				</p>
 			</Project>
 			<Project title="Outil de ticketing"
+				mediaPosition="left"
+				subtitle="Ipsum lorem"
 				medias={[
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
-					'https://ogden_images.s3.amazonaws.com/www.iamcountryside.com/images/sites/2/2022/02/13131252/AdobeStock_74466779-scaled-e1675118602223.jpeg',
+					'https://source.unsplash.com/random?6',
+					'https://source.unsplash.com/random?7',
+					'https://source.unsplash.com/random?8',
+					'https://source.unsplash.com/random?9',
+					'https://source.unsplash.com/random?10',
 				]}>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet congue augue, sit amet ultrices massa. Pellentesque rutrum erat vitae scelerisque rhoncus. Donec eget vulputate justo. Sed eu vestibulum elit. Duis mattis tincidunt congue. Aliquam tincidunt metus imperdiet pharetra gravida. Mauris in condimentum sapien. Proin fermentum velit eget est iaculis, imperdiet posuere lectus placerat. Sed molestie nisl in maximus malesuada. Proin ut sem at arcu rhoncus feugiat ac ac massa. Aliquam consequat elit laoreet sapien suscipit tincidunt. Morbi at risus maximus, dictum mauris id, consequat sem. Duis bibendum blandit dui, at malesuada ante dictum a. Aliquam id interdum ante.
