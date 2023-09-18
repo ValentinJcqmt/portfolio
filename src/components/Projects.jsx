@@ -29,10 +29,14 @@ export default function Projects(){
 					'https://source.unsplash.com/random?5',
 				]}>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet congue augue, sit amet ultrices massa. Pellentesque rutrum erat vitae scelerisque rhoncus. Donec eget vulputate justo. Sed eu vestibulum elit. Duis mattis tincidunt congue. Aliquam tincidunt metus imperdiet pharetra gravida. Mauris in condimentum sapien. Proin fermentum velit eget est iaculis, imperdiet posuere lectus placerat. Sed molestie nisl in maximus malesuada. Proin ut sem at arcu rhoncus feugiat ac ac massa. Aliquam consequat elit laoreet sapien suscipit tincidunt. Morbi at risus maximus, dictum mauris id, consequat sem. Duis bibendum blandit dui, at malesuada ante dictum a. Aliquam id interdum ante.
+					Morbi a leo sapien. Mauris sit amet magna malesuada, sollicitudin lectus et, aliquam tellus. Ut justo eros, aliquam quis laoreet quis, posuere aliquet enim. Nulla non velit sed ipsum tempor sollicitudin. Pellentesque id urna id lectus maximus commodo in hendrerit orci. Vestibulum id interdum quam, nec malesuada nulla. Vestibulum iaculis iaculis blandit. Donec convallis aliquet orci et faucibus.
 				</p>
 				<p>
-					Morbi a leo sapien. Mauris sit amet magna malesuada, sollicitudin lectus et, aliquam tellus. Ut justo eros, aliquam quis laoreet quis, posuere aliquet enim. Nulla non velit sed ipsum tempor sollicitudin. Pellentesque id urna id lectus maximus commodo in hendrerit orci. Vestibulum id interdum quam, nec malesuada nulla. Vestibulum iaculis iaculis blandit. Donec convallis aliquet orci et faucibus.
+					<ul>
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Lorem ipsum dolor sit amet</li>
+					</ul>
 				</p>
 				<p>
 					Nulla facilisi. Vivamus fringilla ex non vulputate molestie. Pellentesque id hendrerit erat. Donec vestibulum tellus eu nulla scelerisque, non varius erat condimentum. Proin blandit massa at tellus hendrerit molestie. Curabitur sed sem consectetur, laoreet dolor id, interdum neque. Duis nulla turpis, sollicitudin non tempor et, fringilla et turpis. Integer fermentum, tortor eu imperdiet ultrices, erat lacus rutrum mauris, in ultrices risus sapien nec tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis venenatis eros, ac eleifend orci. Mauris sed vehicula tortor, sed tristique libero. Nunc a justo mauris. Mauris sed iaculis tellus. Integer molestie dapibus facilisis. Integer pretium nisi nec mauris cursus convallis. Pellentesque vestibulum tincidunt mauris, vitae pellentesque velit aliquam eget.

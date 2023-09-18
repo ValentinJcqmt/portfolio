@@ -1,6 +1,8 @@
 import './../css/components/Project.scss';
 import clsx from "clsx";
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
+
+const MEDIA_CSS_TRANSITION_TIMING = 200;
 
 export default function Project({
 	title,
@@ -10,11 +12,40 @@ export default function Project({
 	children
 }){
 	const [currentMedia, setCurrentMedia] = useState();
-	const swiperRef = useRef();
+	const [nextMedia, setNextMedia] = useState(false);
+	const [animationClass, setAnimationClass] = useState(false);
 
 	useEffect(() => {
 		setCurrentMedia( medias.length ? medias[0] : null );
 	}, []);
+
+	useEffect(() => {
+		setAnimationClass( prevState => nextMedia ? "loading" : prevState);
+	}, [nextMedia])
+
+	useEffect(() => {
+		let animationTimeout;
+
+		switch(animationClass){
+			case "loading":
+				animationTimeout = setTimeout(() => {
+					setCurrentMedia(nextMedia);
+				}, MEDIA_CSS_TRANSITION_TIMING)
+				break;
+
+			case "ending":
+				animationTimeout = setTimeout(() => {
+					setAnimationClass(false);
+				}, MEDIA_CSS_TRANSITION_TIMING)
+				break;
+		}
+
+		return () => clearTimeout(animationTimeout);
+	}, [animationClass]);
+
+	useEffect(() => {
+		setAnimationClass(prevState => (prevState == "loading") && "ending");
+	}, [currentMedia])
 
 	return <div className={clsx("Project", "Project--mediaPosition-"+mediaPosition)}>
 		<div className="Project__container">
@@ -34,14 +65,14 @@ export default function Project({
 			</div>
 
 			{ medias.length && <div className="Project__medias">
-				<picture className="Project__medias__current">
+				<picture className={clsx("Project__medias__current", animationClass)}>
 					<img src={currentMedia} />
 				</picture>
 	
 				<div className='Project__medias__list'>
 					{medias.map((media, i) => <picture key={i}
 						className={clsx("Project__medias__list__item", currentMedia == media && 'current')}
-						onClick={() => setCurrentMedia(media)}>
+						onClick={() => setNextMedia(media)}>
 						<img src={media} />
 					</picture>)}
 				</div>

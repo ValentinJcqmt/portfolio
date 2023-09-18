@@ -20,3 +20,21 @@ html{
     position: absolute;
     white-space: nowrap; 
 }
+
+ul{
+	li{
+		margin-block: 5px;
+		padding-left:20px;
+		position:relative;
+		&:before{
+			content:"";
+			position:absolute;
+			top:7px;
+			left:6px;
+			width: 6px;
+			height: 6px;
+			border-radius: 6px;
+			background-color: currentColor;
+		}
+	}
+}
