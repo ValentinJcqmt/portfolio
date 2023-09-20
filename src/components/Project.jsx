@@ -1,6 +1,6 @@
 import './../css/components/Project.scss';
 import clsx from "clsx";
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 const MEDIA_CSS_TRANSITION_TIMING = 200;
 
@@ -9,7 +9,8 @@ export default function Project({
 	subtitle,
 	medias = [],
 	mediaPosition = "right",
-	children
+	children,
+	url
 }){
 	const [currentMedia, setCurrentMedia] = useState();
 	const [nextMedia, setNextMedia] = useState(false);
@@ -45,7 +46,33 @@ export default function Project({
 
 	useEffect(() => {
 		setAnimationClass(prevState => (prevState == "loading") && "ending");
-	}, [currentMedia])
+	}, [currentMedia]);
+
+	const renderCurrentMedia = useCallback(() => {
+		if( !currentMedia ) return;
+		
+		switch( currentMedia?.split('.').pop() ){
+			case 'mp4':
+				return <video preload="metadata" src={currentMedia} autoPlay loop muted />
+
+			default:
+				return <picture>
+					<img src={currentMedia} />
+				</picture>
+		}
+	}, [currentMedia, animationClass]);
+
+	const renderMediaThumbnail = useCallback(media => {
+		switch( media?.split('.').pop() ){
+			case 'mp4':
+				return <video src={media} muted preload='metadata' />
+
+			default:
+				return <picture>
+					<img src={media} />
+				</picture>
+		}
+	}, [])
 
 	return <div className={clsx("Project", "Project--mediaPosition-"+mediaPosition)}>
 		<div className="Project__container">
@@ -58,6 +85,10 @@ export default function Project({
 					{subtitle}
 				</p> }
 
+				{ url && <a href={url} target="_blank" className='Project__content__url'>
+					Voir le projet
+				</a> }
+
 				<div className="Project__content__text">
 					{children}
 				</div>
@@ -65,17 +96,17 @@ export default function Project({
 			</div>
 
 			{ medias.length && <div className="Project__medias">
-				<picture className={clsx("Project__medias__current", animationClass)}>
-					<img src={currentMedia} />
-				</picture>
+				<div className={clsx("Project__medias__current", animationClass)}>
+					{ renderCurrentMedia() }
+				</div>
 	
-				<div className='Project__medias__list'>
-					{medias.map((media, i) => <picture key={i}
+				{ medias.length > 1 && <div className='Project__medias__list'>
+					{medias.map((media, i) =><div key={i}
 						className={clsx("Project__medias__list__item", currentMedia == media && 'current')}
 						onClick={() => setNextMedia(media)}>
-						<img src={media} />
-					</picture>)}
-				</div>
+						{ renderMediaThumbnail(media) }
+					</div>)}
+				</div> }
 			</div> }
 
 

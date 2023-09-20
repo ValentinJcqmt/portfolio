@@ -87,7 +87,7 @@ function Hero(){
 			</div>
 
 			<div className="Hero__goToProjects__container">
-				<a href="#projects" className={clsx('Hero__goToProjects', !animated && 'beforeAnimation')} title="Mes créations"></a>
+				<a href="#projects" className={clsx('Hero__goToProjects', !animated && 'beforeAnimation')} title="Réalisations"></a>
 			</div>
 
 		</div>

@@ -1,66 +1,94 @@
 import './../css/components/Projects.scss';
 import Project from './Project';
 
-/**
- * Refonte support (2023) : Laravel, React, gestion de rôle
- * CHGR (2023) : Laravel, React, génération de fichiers image, gestion de rôle
- * URD (2020) : WP, moteur de recherche, 9 post types, 6 taxonomies, recherche par date, recherche par langues (WPML)
- * St Jacques de la lande (2023) : WP, Accessibilité (typo dyslexie, taille de texte adaptative), eco-conception (le moins de scripts JS possible)
- * Mon Suivi IVG : WP, Questions/Réponses
- * Assia una : WP, intranet ? gmap ?
- * LHFT : WP, dépôts d'annonce
- * Place to paint : modification d'un fonctionnement déjà existant, transfert des oeuvres du site (post type WP) sur une table bdd optimisée
- */
-
 export default function Projects(){
 	return <section id="projects" className="Projects">
 		<div className='Projects__container'>
 			<h2 className='Projects__title'>
-				Mes créations
+				Réalisations
 			</h2>
 			<Project title="Outil de ticketing"
-				subtitle="Lorem ipsum"
+				subtitle="Laravel, React, Projet complet"
 				mediaPosition="right"
 				medias={[
-					'https://source.unsplash.com/random?1',
-					'https://source.unsplash.com/random?2',
-					'https://source.unsplash.com/random?3',
-					'https://source.unsplash.com/random?4',
-					'https://source.unsplash.com/random?5',
+					'projects/ticketing/create-ticket.mp4',
+					'projects/ticketing/back-office.png'
 				]}>
-				<p>
-					Morbi a leo sapien. Mauris sit amet magna malesuada, sollicitudin lectus et, aliquam tellus. Ut justo eros, aliquam quis laoreet quis, posuere aliquet enim. Nulla non velit sed ipsum tempor sollicitudin. Pellentesque id urna id lectus maximus commodo in hendrerit orci. Vestibulum id interdum quam, nec malesuada nulla. Vestibulum iaculis iaculis blandit. Donec convallis aliquet orci et faucibus.
-				</p>
-				<p>
-					<ul>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>Lorem ipsum dolor sit amet</li>
-					</ul>
-				</p>
-				<p>
-					Nulla facilisi. Vivamus fringilla ex non vulputate molestie. Pellentesque id hendrerit erat. Donec vestibulum tellus eu nulla scelerisque, non varius erat condimentum. Proin blandit massa at tellus hendrerit molestie. Curabitur sed sem consectetur, laoreet dolor id, interdum neque. Duis nulla turpis, sollicitudin non tempor et, fringilla et turpis. Integer fermentum, tortor eu imperdiet ultrices, erat lacus rutrum mauris, in ultrices risus sapien nec tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis venenatis eros, ac eleifend orci. Mauris sed vehicula tortor, sed tristique libero. Nunc a justo mauris. Mauris sed iaculis tellus. Integer molestie dapibus facilisis. Integer pretium nisi nec mauris cursus convallis. Pellentesque vestibulum tincidunt mauris, vitae pellentesque velit aliquam eget.
-				</p>
+				<ul>
+					<li>Projet interne, gestion de tickets, connexion, roles utilisateurs, dépots de tickets, échanges de messages et de pièces jointes</li>
+					<li>Développeur réferrent, conception et rédaction de specifications techniques</li>
+					<li>Front et routing React, API Laravel, back-office laravel nova</li>
+				</ul>
 			</Project>
-			<Project title="Outil de ticketing"
+			<Project title="Générateur de logos"
+				subtitle="Laravel, React, Projet complet"
 				mediaPosition="left"
-				subtitle="Ipsum lorem"
 				medias={[
-					'https://source.unsplash.com/random?6',
-					'https://source.unsplash.com/random?7',
-					'https://source.unsplash.com/random?8',
-					'https://source.unsplash.com/random?9',
-					'https://source.unsplash.com/random?10',
+					'projects/logo/create-icon.mp4',
+					'projects/logo/create-logo.mp4',
+					'projects/logo/list.mp4',
 				]}>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet congue augue, sit amet ultrices massa. Pellentesque rutrum erat vitae scelerisque rhoncus. Donec eget vulputate justo. Sed eu vestibulum elit. Duis mattis tincidunt congue. Aliquam tincidunt metus imperdiet pharetra gravida. Mauris in condimentum sapien. Proin fermentum velit eget est iaculis, imperdiet posuere lectus placerat. Sed molestie nisl in maximus malesuada. Proin ut sem at arcu rhoncus feugiat ac ac massa. Aliquam consequat elit laoreet sapien suscipit tincidunt. Morbi at risus maximus, dictum mauris id, consequat sem. Duis bibendum blandit dui, at malesuada ante dictum a. Aliquam id interdum ante.
-				</p>
-				<p>
-					Morbi a leo sapien. Mauris sit amet magna malesuada, sollicitudin lectus et, aliquam tellus. Ut justo eros, aliquam quis laoreet quis, posuere aliquet enim. Nulla non velit sed ipsum tempor sollicitudin. Pellentesque id urna id lectus maximus commodo in hendrerit orci. Vestibulum id interdum quam, nec malesuada nulla. Vestibulum iaculis iaculis blandit. Donec convallis aliquet orci et faucibus.
-				</p>
-				<p>
-					Nulla facilisi. Vivamus fringilla ex non vulputate molestie. Pellentesque id hendrerit erat. Donec vestibulum tellus eu nulla scelerisque, non varius erat condimentum. Proin blandit massa at tellus hendrerit molestie. Curabitur sed sem consectetur, laoreet dolor id, interdum neque. Duis nulla turpis, sollicitudin non tempor et, fringilla et turpis. Integer fermentum, tortor eu imperdiet ultrices, erat lacus rutrum mauris, in ultrices risus sapien nec tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis venenatis eros, ac eleifend orci. Mauris sed vehicula tortor, sed tristique libero. Nunc a justo mauris. Mauris sed iaculis tellus. Integer molestie dapibus facilisis. Integer pretium nisi nec mauris cursus convallis. Pellentesque vestibulum tincidunt mauris, vitae pellentesque velit aliquam eget.
-				</p>
+				<ul>
+					<li>Projet interne client, harmonisation communication interne</li>
+					<li>Front et routing React, API Laravel</li>
+					<li>3 interfaces principales : générateur d'icone, générateur de logo (icone + lignes de texte), bibliothèque d'icones et de logos</li>
+					<li>Générateur de logo sur balise canvas suivant plusieurs contraintes</li>
+					<li>Stockage de seed et textes des logos en base de données</li>
+					<li>Génération et téléchargement d'un dossier compressé comprenant les fichiers png et svg d'un logo</li>
+				</ul>
+			</Project>
+			<Project title="Chatbot F.A.Q."
+				subtitle="Wordpress, Javascript, PHP"
+				url="https://monsuivi.ivginfo.com/desktop/"
+				mediaPosition="right"
+				medias={[
+					'projects/chatbot/chatbot.mp4',
+					'projects/chatbot/back-office.png',
+				]}>
+				<ul>
+					<li>Administration d'un CPT de questions et réponses</li>
+					<li>Récupération des réponses et listes de questions en ajax</li>
+					<li>Animation d'affichage progressif</li>
+				</ul>
+			</Project>
+			<Project title="Moteur de recherche"
+				subtitle="Wordpress, PHP"
+				url="https://www.urd.org/fr/page-de-recherche/"
+				mediaPosition="left"
+				medias={[
+					'projects/moteur-recherche/form.png',
+					'projects/moteur-recherche/results.png',
+				]}>
+				<ul>
+					<li>Moteur de recherche sur environnement Wordpress</li>
+					<li>Recherche parmis 8 CPT et X taxonomies, dates de publications, dates d'évènements (champs meta sur 1 CPT Evenement), multilangue (WPML)</li>
+				</ul>
+			</Project>
+			<Project title="Eco-conception et accessibilité"
+				subtitle="Wordpress, Javascript, CSS"
+				url="https://www.st-jacques.fr/"
+				mediaPosition="right"
+				medias={[
+					'projects/ecoconception/homepage.png'
+				]}>
+				<ul>
+					<li>Réalisation de la page d'accueil, menu de navigation, et plusieurs gabarits de pages du site</li>
+					<li>Options d'accessibilités : taille de typographie, typo dyslexie</li>
+					<li>Enjeu d'éco-conception : optimisation d'images, le moins d'animations et de javascript possible, optimisation du stockage d'images wordpress (réduction du nombre d'images sizes)</li>
+				</ul>
+			</Project>
+			<Project title="Module d'offres d'emploi"
+				subtitle="Wordpress, PHP, CSS"
+				url="https://www.liguehautsdefrancetennis.fr/offres-emploi/"
+				mediaPosition="left"
+				medias={[
+					'projects/offres-emploi/list.png',
+					'projects/offres-emploi/form.png'
+				]}>
+				<ul>
+					<li>Gestion d'un CPT d'offre d'emploi : page liste par région</li>
+					<li>Formulaire de dépôt d'offre accessible pour tous les visiteurs du site</li>
+				</ul>
 			</Project>
 		</div>
 	</section>
