@@ -1,10 +1,13 @@
 @import '../abstracts/variables.scss';
+@import '../abstracts/mixins.scss';
+
 *::selection{
 	color:$color_dark;
 	background-color: $color_primary_400;
 }
 
 html{
+	@include thinScrollbar;
 	scroll-behavior: smooth;
 }
 
