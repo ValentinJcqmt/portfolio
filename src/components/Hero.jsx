@@ -74,7 +74,8 @@ function Hero(){
 
 				<div className='Hero__buttons__bottom'>
 					<div className={clsx('Hero__buttons__bottom__container', !animated && 'beforeAnimation')}>
-						{ buttons.map(button => <Button
+						{ buttons.map((button, i) => <Button
+							key={i}
 							icon={button.icon}
 							href={button.href}
 							target={button.target}
@@ -83,6 +84,10 @@ function Hero(){
 					</div>
 				</div>
 
+			</div>
+
+			<div className="Hero__goToProjects__container">
+				<a href="#projects" className={clsx('Hero__goToProjects', !animated && 'beforeAnimation')} title="Réalisations"></a>
 			</div>
 
 		</div>
